@@ -29,8 +29,9 @@
   </div>
   <div>  <a href="#" class="abrir">Abrir menu</a></div>
 
-
 </body>
+
+<div class="footer"><p>Footer</p></div>
 
 </html>
 
