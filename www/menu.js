@@ -16,16 +16,15 @@ document.addEventListener('DOMContentLoaded', (e) =>{
         e.stopPropagation();
     });
 
-    console.log(carta)
-    carta.addEventListener('mouseover', e=>{
-        cartalist.classList.remove('carta-hidden');
-        e.stopPropagation();
-    });
-
-    cartalist.addEventListener('mouseout', e=>{
-        cartalist.classList.add('carta-hidden');
-        e.stopPropagation();
-    });
-
+    carta.addEventListener('click',submenu);
+    document.querySelector("carta-list").style.display = "none";
+    function submenu(){
+        var estado = cartalist.style.display;
+        if (estado == "none"){
+            cartalist.style.display = "block";
+        }else{
+            cartalist.style.display = "none";            
+        }
+    }
 
 }); 

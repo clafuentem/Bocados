@@ -7,6 +7,7 @@
 	<!-- CSS only -->
 <link href="style.css" rel="stylesheet">
 <script src="menu.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 	<title>Document</title>
 </head>
 
@@ -17,7 +18,7 @@
     <ul class="menu">
       <li><a href="#">Inicio</a></li>
       <li><a href="#">Reservas</a></li>
-      <li><a href="#">Servicios</a><ul>
+      <li><a href="#" >Servicios  <i id="carta" style='font-size:16px' class='far'>&#xf150;</i></a><ul id="carta-list" class="carta-hidden">
                 <li><a href="#">Servicio A</a></li>
                 <li><a href="#">Servicio B</a></li>
                 <li><a href="#">Servicio C</a></li>
