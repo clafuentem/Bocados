@@ -33,6 +33,9 @@ li:hover{
     position: relative;
     top: 5%;
     left: 40%;
+    text-decoration: none;
+    color: #000;
+    font-size: 32px;
 }
 
 .sidebar-hidden{
@@ -91,7 +94,7 @@ li{
                 
 li a{
     text-decoration:none;
-    display: flex;
+    display: inline-block;
     padding: 15px;
     width:100%;
     border:1px solid #000;
@@ -103,6 +106,41 @@ li a:hover{
     color:#000;
     background-color:#fff;
                 
+}
+
+
+.login-box{
+/*     border: red solid 1px; */
+    height: 300px;
+    width: 100%;
+}
+
+.login-box div{
+/*     border: yellowgreen solid 1px; */
+    height: 150px;
+}
+
+input[type='email'], 
+input[type='password']{
+    background-color: black;
+    border: none;
+    border-bottom: brown 1px solid;
+    width: 70%;
+    padding: 16px;
+    margin: 5px;
+    left: 6%;
+    position: relative;
+    color: white;
+}
+
+input[type='submit']{
+    background-color: brown;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    left: 6%;
+    position: relative;
 }
 
 .general{
