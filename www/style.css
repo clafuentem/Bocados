@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:sans-serif
+    font-family:sans-serif;
+    font-weight: 600;
 }
 
 /* #sidebar a{
@@ -121,7 +122,9 @@ li a:hover{
 }
 
 input[type='email'], 
-input[type='password']{
+input[type='password'],
+input[type='text'],
+input[type='date']{
     background-color: black;
     border: none;
     border-bottom: brown 1px solid;
@@ -133,6 +136,23 @@ input[type='password']{
     color: white;
 }
 
+.register-form input{
+    background-color: black;
+    border: none;
+    border-bottom: brown 1px solid;
+    top: 10%;
+    width: 80%;
+    padding: 20px;
+    margin: 5px;
+    left: 8%;
+    position: relative;
+    color: white;
+}
+
+.register-form input[type='submit']{
+    left: 8%;
+}
+
 input[type='submit']{
     background-color: brown;
     border: none;
@@ -141,6 +161,35 @@ input[type='submit']{
     color: white;
     left: 6%;
     position: relative;
+}
+
+#register{
+    position: absolute;
+    right: 40px;
+    color: brown;
+}
+
+#register-box{
+    /* border: rgb(0, 0, 0) solid 1px; */
+    background-color: #000;
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    left: 25%;
+    top: 10%;
+    box-shadow: 15px 10px 5px #aaa;
+    border-radius: 5px;
+    display: flex;
+}
+
+#register-box div{
+    /* border: red solid 1px; */
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    left: 16%;
+    top: 10%;
 }
 
 .general{
@@ -188,10 +237,12 @@ input[type='submit']{
 
 .box1{
     display: flex;
-    width: 33.5%;
-    padding: 15px;
-/*     border: red solid 1px; */
+    width: 36.5%;
+    left: 32%;
+    position: relative;
+    padding: 15px; 
 }
+
 .box1 div{
     padding: 15px;
 /*     border: red solid 1px; */

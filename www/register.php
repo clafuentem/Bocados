@@ -56,10 +56,19 @@
     <div class="div1">
       <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
       <div></div>
-    </div>
-    <div class="div1">
-      <div></div>
-      <div></div>
+      <div id="register-box">
+            <form action="do_register.php" action="post">
+                <div class="register-form">
+                    <input type="text" name="nombre" placeholder="Nombre"><br><br>
+                    <input type="text" name="apellido" placeholder="Apellidos"><br><br>
+                    <input type="date" name="fecha" placeholder="Fecha de nacimiento"><br><br>
+                    <input type="email" name="email" placeholder="Email"><br><br>
+                    <input type="password" name="pswd1" placeholder="Contraseña"><br><br>
+                    <input type="password" name="pswd2" placeholder="Confirmar contraseña"><br><br>
+                    <input id="boton-regis" type="submit" value="Registrarse">
+                </div>
+            </form>
+      </div>
     </div>
   </div>
 
