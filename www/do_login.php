@@ -15,16 +15,17 @@ try {
     $result = $stmt->get_result();
     $sql = $result->fetch_array();
     $id = $sql['id'];
-    $encrypted_pswd = $sql['encrypted_password'];
+    $encrypted_password = $sql['encrypted_password'];
+
 
     if (($result->num_rows) == 0) {
       die("No existe una cuenta con este email");
     } else {
 
-      if (password_verify($password, $encrypted_pswd)) {
+      if (password_verify($password, $encrypted_password)) {
         session_start();
         $_SESSION['user_id'] = $id;
-        header("Location: main.php");
+        header("Location: index.php");
         exit();
       } else {
         die("Contraseña incorrecta");

@@ -39,9 +39,9 @@
         <li><a href="contacto.php">Contacto</a></li>
         <li><a href="#" id="login">Iniciar sesión</a></li>
         <div class="login-box">
-          <form action="post" action="do_login.php">
+          <form method="post" action="do_login.php">
             <div class="login">
-              <input type="email" name="email" placeholder="Email"><br><br>
+              <input type="text" name="mail" placeholder="Email"><br><br>
               <input type="password" name="password" placeholder="Contraseña">
             </div>
             <input type="submit" value="Iniciar sesión">
@@ -59,13 +59,14 @@
       <div id="register-box">
             <form action="do_register.php" action="post">
                 <div class="register-form">
-                    <input type="text" name="nombre" placeholder="Nombre"><br><br>
-                    <input type="text" name="apellido" placeholder="Apellidos"><br><br>
+                    <input type="text" name="name" placeholder="Nombre" required><br><br>
+                    <input type="text" name="surname" placeholder="Apellidos"><br><br>
                     <input type="date" name="fecha" placeholder="Fecha de nacimiento"><br><br>
-                    <input type="email" name="email" placeholder="Email"><br><br>
-                    <input type="password" name="pswd1" placeholder="Contraseña"><br><br>
-                    <input type="password" name="pswd2" placeholder="Confirmar contraseña"><br><br>
-                    <input id="boton-regis" type="submit" value="Registrarse">
+                    <input type="tel" name="telf" placeholder="Nº Teléfono" required><br><br>
+                    <input type="text" name="email" placeholder="Email" required><br><br>
+                    <input type="password" name="pswd" placeholder="Contraseña" required><br><br>
+                    <input type="password" name="pswd2" placeholder="Confirmar contraseña" required><br><br>
+                    <input type="submit" id="boton-regis" value="Registrarse">
                 </div>
             </form>
       </div>
