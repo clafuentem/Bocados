@@ -6,6 +6,18 @@
     font-weight: 600;
 }
 
+.div-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.div-background img{
+    object-fit: contain;
+    
+}
+
 /* #sidebar a{
     text-decoration: none;
     color: aquamarine;
@@ -23,6 +35,20 @@ li{
 li:hover{
     background-color: rgb(126, 125, 123);
 } */
+
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+#logout{
+    position: absolute;
+    right: 0%;
+}
 
 .abrir-menu{
 /*     border: orange 1px solid; */
@@ -48,7 +74,7 @@ li:hover{
     height: 100%;
     width: 300px;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
 }
 
 #sidebar .boton-cerrar {
@@ -172,7 +198,7 @@ input[type='submit']{
 #register-box{
     /* border: rgb(0, 0, 0) solid 1px; */
     background-color: #000;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     width: 50%;
     height: 80%;
@@ -229,7 +255,9 @@ input[type='submit']{
     width: 100%;
     background-color: #000;
     color: white;
+    z-index: 99;
 }
+
 
 .box-footer{
     display: flex;

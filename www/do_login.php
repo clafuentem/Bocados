@@ -6,8 +6,9 @@ try {
 
     $mysqli = open_connection();
 
-    $email = $_POST['email'];
+    $email = $_POST['mail'];
     $password = $_POST['password'];
+   
 
     $stmt = $mysqli-> prepare("SELECT id, email, encrypted_password FROM tUser WHERE email = ?");
     $stmt->bind_param("s",$email);
@@ -32,11 +33,11 @@ try {
         }
       }
         $stmt->close();
-    }catch (Exception $e){
+}catch (Exception $e){
 
-        echo "<script>alert('Ha ocurrido un error inesperado');</script>";
+  echo "<script>alert('Ha ocurrido un error inesperado');</script>";
       
-    }
+}
 
 
 ?>

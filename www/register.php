@@ -57,12 +57,11 @@
       <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
       <div></div>
       <div id="register-box">
-            <form action="do_register.php" action="post">
+            <form method="post" action="do_register.php">
                 <div class="register-form">
                     <input type="text" name="name" placeholder="Nombre" required><br><br>
-                    <input type="text" name="surname" placeholder="Apellidos"><br><br>
-                    <input type="date" name="fecha" placeholder="Fecha de nacimiento"><br><br>
-                    <input type="tel" name="telf" placeholder="Nº Teléfono" required><br><br>
+                    <input type="text" name="surname" placeholder="Apellidos" ><br><br>
+                    <input type="text" name="telf" placeholder="Nº Teléfono (123-123-123)" required><br><br>
                     <input type="text" name="email" placeholder="Email" required><br><br>
                     <input type="password" name="pswd" placeholder="Contraseña" required><br><br>
                     <input type="password" name="pswd2" placeholder="Confirmar contraseña" required><br><br>

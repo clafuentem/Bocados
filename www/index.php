@@ -21,87 +21,53 @@
 
 <body>
 <?php
+
 session_start();
-if (isset($_SESSION['user_id'])) {
-echo'
-<div class="general">
-<div id="sidebar" class="sidebar-hidden" >
-  <a href="#" class="boton-cerrar">×</a>
-  <div class="menu-list">
-    <ul class="menu">
-      <li><a href="index.php">Inicio</a></li>
-      <li><a href="reservas.php">Reservas</a></li>
-      <li><a href="#" >Carta  <i id="carta" style="font-size:16px" class="far">&#xf150;</i></a>
-            <ul id="carta-list" class="carta-hidden">
-                <li><a href="entrantes.php">Entrantes</a></li>
-                <li><a href="carnes.php">Carnes</a></li>
-                <li><a href="pescados.php">Pescados</a></li>
-                <li><a href="postres.php">Postres</a></li>
-                <li><a href="bebidas.php">Bebidas</a></li>
-            </ul></li>
-      <li><a href="nosotros.php">Nosotros</a></li>
-      <li><a href="contacto.php">Contacto</a></li>
-      <li><a href="#" id="login">Iniciar sesión</a></li>
-      <div class="login-box">
-        <form method="post" action="do_login.php">
-          <div class="login">
-            <input type="text" name="email" placeholder="Email"><br><br>
-            <input type="password" name="password" placeholder="Contraseña">
-          </div>
-          <input type="submit" value="Iniciar sesión">
-        </form>
-        <a id="register" href="register.php">Registrate aquí</a>
-        <a href="do_logout.php">Cerrar sesión</a>
-      </div>
-    </ul> 
-  </div>
-</div>
-';
-}else{
-  echo'
-<div class="general">
-<div id="sidebar" class="sidebar-hidden" >
-  <a href="#" class="boton-cerrar">×</a>
-  <div class="menu-list">
-    <ul class="menu">
-      <li><a href="index.php">Inicio</a></li>
-      <li><a href="reservas.php">Reservas</a></li>
-      <li><a href="#" >Carta  <i id="carta" style="font-size:16px" class="far">&#xf150;</i></a>
-            <ul id="carta-list" class="carta-hidden">
-                <li><a href="entrantes.php">Entrantes</a></li>
-                <li><a href="carnes.php">Carnes</a></li>
-                <li><a href="pescados.php">Pescados</a></li>
-                <li><a href="postres.php">Postres</a></li>
-                <li><a href="bebidas.php">Bebidas</a></li>
-            </ul></li>
-      <li><a href="nosotros.php">Nosotros</a></li>
-      <li><a href="contacto.php">Contacto</a></li>
-      <li><a href="#" id="login">Iniciar sesión</a></li>
-      <div class="login-box">
-        <form method="post" action="do_login.php">
-          <div class="login">
-            <input type="text" name="email" placeholder="Email"><br><br>
-            <input type="password" name="password" placeholder="Contraseña">
-          </div>
-          <input type="submit" value="Iniciar sesión">
-        </form>
-        <a id="register" href="register.php">Registrate aquí</a>
-      </div>
-    </ul> 
-  </div>
-</div>
-';
+
+$user_id = $_SESSION['user_id'];
+
+if(!empty($user_id)){
+  echo '<script src="functions.js"></script>';
 }
+
 ?>
+
+<div class="general">
+  <div id="sidebar" class="sidebar-hidden" >
+    <a href="#" class="boton-cerrar">×</a>
+    <div class="menu-list">
+      <ul class="menu">
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="reservas.php">Reservas</a></li>
+        <li><a href="#" >Carta  <i id="carta" style="font-size:16p" class="far">&#xf150;</i></a>
+              <ul id="carta-list" class="carta-hidden">
+                  <li><a href="entrantes.php">Entrantes</a></li>
+                  <li><a href="carnes.php">Carnes</a></li>
+                  <li><a href="pescados.php">Pescados</a></li>
+                  <li><a href="postres.php">Postres</a></li>
+                  <li><a href="bebidas.php">Bebidas</a></li>
+              </ul></li>
+        <li><a href="nosotros.php">Nosotros</a></li>
+        <li><a href="contacto.php">Contacto</a></li>
+        <li><a href="#" id="login">Iniciar sesión</a></li>
+        <div class="login-box">
+          <form method="post" action="do_login.php">
+            <div class="login">
+              <input type="text" name="mail" placeholder="Email"><br><br>
+              <input type="password" name="password" placeholder="Contraseña">
+            </div>
+            <input type="submit" value="Iniciar sesión">
+          </form>
+          <a id="register" href="register.php">Registrate aquí</a>
+        </div>
+      </ul> 
+    </div>
+  </div>
 
   <div class="main-div">
     <div class="div1">
-      <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
-      <div></div>
-    </div>
-    <div class="div1">
-      <div></div>
-      <div></div>
+      <div><div class="abrir-menu"><a href="#" class="abrir">MENU<!-- <i class="fas fa-bars"></i> --></a></div></div>
+      <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
     </div>
   </div>
 
