@@ -11,6 +11,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS only -->
 <link rel="icon" href="favicon.ico"> 
 <link href="style.css" rel="stylesheet">
 <script src="menu.js"></script>
@@ -19,26 +20,14 @@
 </head>
 
 <body>
-<?php
-
-session_start();
-
-$user_id = $_SESSION['user_id'];
-
-if(!empty($user_id)){
-  echo '<script src="functions.js"></script>';
-}
-
-?>
-
-<div class="general">
+  <div class="general">
   <div id="sidebar" class="sidebar-hidden" >
     <a href="#" class="boton-cerrar">×</a>
     <div class="menu-list">
       <ul class="menu">
         <li><a href="index.php">Inicio</a></li>
         <li><a href="reservas.php">Reservas</a></li>
-        <li><a href="#" >Carta  <i id="carta" style="font-size:16p" class="far">&#xf150;</i></a>
+        <li><a href="#" >Carta  <i id="carta" style='font-size:16px' class='far'>&#xf150;</i></a>
               <ul id="carta-list" class="carta-hidden">
                   <li><a href="entrantes.php">Entrantes</a></li>
                   <li><a href="carnes.php">Carnes</a></li>
@@ -66,7 +55,20 @@ if(!empty($user_id)){
   <div class="main-div">
     <div class="div1">
       <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
-      <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
+      <div></div>
+      <div id="register-box">
+            <form method="post" action="do_register.php">
+                <div class="register-form">
+                    <input type="text" name="name" placeholder="Nombre" required><br><br>
+                    <input type="text" name="surname" placeholder="Apellidos" ><br><br>
+                    <input type="text" name="telf" placeholder="Nº Teléfono (123-123-123)" required><br><br>
+                    <input type="text" name="email" placeholder="Email" required><br><br>
+                    <input type="password" name="pswd" placeholder="Contraseña" required><br><br>
+                    <input type="password" name="pswd2" placeholder="Confirmar contraseña" required><br><br>
+                    <input type="submit" id="boton-regis" value="Registrarse">
+                </div>
+            </form>
+      </div>
     </div>
   </div>
 
