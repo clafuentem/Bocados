@@ -47,7 +47,38 @@ li:hover{
 
 #logout{
     position: absolute;
+    padding: 15px;
+    top: 25%;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 8px 8px 5px #aaa;
+}
+
+
+.logout-button {
+    position: relative;
+/*     border: 1px solid rebeccapurple; */
+    width: 100%;
+    height: 100%;
+}
+
+.logout-button div{
+    position: relative;
+/*     border: 1px solid red; */
+    width: 50%;
+    height: 50%;
+}
+
+.logout-button > div > div{
+    position: absolute;
     right: 0%;
+}
+
+.logout-button > div > div > a{
+    text-decoration: none;
+    border: #000 solid 1px;
 }
 
 .abrir-menu{
@@ -179,6 +210,23 @@ input[type='date']{
     left: 8%;
 }
 
+.reservas-form input{
+    background-color: black;
+    border: none;
+    border-bottom: brown 1px solid;
+    top: 10%;
+    width: 80%;
+    padding: 20px;
+    margin: 5px;
+    left: 8%;
+    position: relative;
+    color: white;
+}
+
+.reservas-form input[type='submit']{
+    left: 8%;
+}
+
 input[type='submit']{
     background-color: brown;
     border: none;
@@ -187,6 +235,40 @@ input[type='submit']{
     color: white;
     left: 6%;
     position: relative;
+    border-radius: 4px;
+}
+
+.datos-reserva{
+    position: absolute;
+    /* border: 1px solid red; */
+    left: 25%;
+}
+
+.datos-reserva > div{
+    position: absolute;
+    border: 1px solid rgb(0, 0, 0);
+    width: 80%;
+    height: 25%;
+    top: 35%;
+    left: 25%;
+    border-radius: 10px;
+    background-color: #000; 
+    box-shadow: 15px 10px 5px #aaa;
+    text-shadow: 5px 2px 5px #aaa;
+}
+
+.datos-reserva > div > label{
+    position: relative;
+    font-size: 24px;
+    left: 20%;
+    top: 10%;
+    color: #fff;
+}
+
+#cancelar{
+    position: absolute;
+    left: 32.5% ;
+    top: 70%;
 }
 
 select {
@@ -203,7 +285,6 @@ select {
 
 .button-horario:hover {
     background-color: #aaa;
-    
 }
 
 #register{

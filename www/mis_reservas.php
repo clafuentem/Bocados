@@ -1,9 +1,3 @@
-<?php 
-  include 'db_connection.php';
-
-  $mysqli = open_connection();
-  close_connection($mysqli);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +14,17 @@
 </head>
 
 <body>
+<?php
+
+session_start();
+
+$user_id = $_SESSION['user_id'];
+
+if(!empty($user_id)){
+  echo '<script src="functions.js"></script>';
+}
+?>
+
 <div class="general">
   <div id="sidebar" class="sidebar-hidden" >
     <a href="#" class="boton-cerrar">×</a>
@@ -27,7 +32,7 @@
       <ul class="menu">
         <li><a href="index.php">Inicio</a></li>
         <li><a href="reservas.php">Reservas</a></li>
-        <li id="mis-reservas" class="hide"><a href="mis_reservas.php">Mis Reservas</a></li>
+        <li id="mis-reservas" class="hide"><a href="reservas.php">Mis Reservas</a></li>
         <li><a href="#" >Carta  <i id="carta" style="font-size:16p" class="far">&#xf150;</i></a>
               <ul id="carta-list" class="carta-hidden">
                   <li><a href="entrantes.php">Entrantes</a></li>
@@ -55,7 +60,7 @@
 
   <div class="main-div">
     <div class="div1">
-    <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
+      <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
       <div class="logout-button">
         <div>
         </div>
@@ -63,19 +68,52 @@
           <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
         </div>
       </div>
-      <div id="register-box">
-            <form method="post" action="do_register.php">
-                <div class="register-form">
-                    <input type="text" name="name" placeholder="Nombre" required><br><br>
-                    <input type="text" name="surname" placeholder="Apellidos" ><br><br>
-                    <input type="text" name="telf" placeholder="Nº Teléfono (123-123-123)" required><br><br>
-                    <input type="text" name="email" placeholder="Email" required><br><br>
-                    <input type="password" name="pswd" placeholder="Contraseña" required><br><br>
-                    <input type="password" name="pswd2" placeholder="Confirmar contraseña" required><br><br>
-                    <input type="submit" id="boton-regis" value="Registrarse">
-                </div>
-            </form>
-      </div>
+        <?php 
+
+            include 'db_connection.php';
+
+            $mysqli = open_connection();
+
+            session_start();
+
+            $user_id = $_SESSION['user_id'];
+            
+            $sql = "SELECT tUser.name, tUser.telf, tHorario.hora 
+                    FROM tHorario 
+                    INNER JOIN tReservas 
+                    ON tHorario.id = tReservas.id_horario 
+                    INNER JOIN tUser 
+                    ON tReservas.id_user = tUser.id 
+                    WHERE tUser.id = ?";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param("i",$user_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0){
+               echo "<div class='datos-reserva'>";
+               while($row = mysqli_fetch_array($result)){
+                     echo "
+                            <div>
+                                <label>Nombre.:  ".$row['name']."</label><br><br>
+                                <label>Nº de teléfono.: ".$row['telf']."</label><br><br>
+                                <label>Hora.: ".$row['hora']."</label><br><br>
+                                <form method='post' action='borrar_reserva.php'>
+                                <input id='cancelar' type='submit' value='Cancelar Reserva' >
+                                </form>
+                            </div>
+                        ";
+
+                    echo "</div>";
+               }
+              
+             }else{
+                echo "<p'>No hay resultados</p>";
+             }
+
+            close_connection($mysqli);
+
+        ?>
     </div>
   </div>
 

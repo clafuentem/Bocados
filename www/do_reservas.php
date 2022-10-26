@@ -9,15 +9,16 @@ try{
 
     $mysqli = open_connection();
 
+    $user_id = $_POST['user_id'];
     $name = $_POST['name'];
     $surname = $_POST['surname'];
     $telf = $_POST['telf'];
     $hora_id = $_POST['hora_id'];
 
 
-    $sql = "INSERT INTO tReservas (name, surname, telf, id_horario) VALUES ( ?, ?, ?, ?) ";
+    $sql = "INSERT INTO tReservas (name, surname, telf, id_horario, id_user) VALUES ( ?, ?, ?, ?, ?) ";
     $stmt = $mysqli -> prepare($sql);
-    $stmt -> bind_param("sssi", $name ,$surname ,$telf, $hora_id);
+    $stmt -> bind_param("sssii", $name ,$surname ,$telf, $hora_id, $user_id);
     $stmt -> execute();
     $stmt -> close();
 

@@ -38,6 +38,7 @@ if(!empty($user_id)){
       <ul class="menu">
         <li><a href="index.php">Inicio</a></li>
         <li><a href="reservas.php">Reservas</a></li>
+        <li id="mis-reservas" class="hide"><a href="mis_reservas.php">Mis Reservas</a></li>
         <li><a href="#" >Carta  <i id="carta" style="font-size:16p" class="far">&#xf150;</i></a>
               <ul id="carta-list" class="carta-hidden">
                   <li><a href="entrantes.php">Entrantes</a></li>
@@ -66,7 +67,13 @@ if(!empty($user_id)){
   <div class="main-div">
     <div class="div1">
       <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
-      <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
+      <div class="logout-button">
+        <div>
+        </div>
+        <div>
+          <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
+        </div>
+      </div>
     </div>
   </div>
 
