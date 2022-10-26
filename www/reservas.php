@@ -56,6 +56,8 @@
                     <input type="text" name="name" placeholder="Nombre" required><br><br>
                     <input type="text" name="surname" placeholder="Apellidos" ><br><br>
                     <input type="text" name="telf" placeholder="Nº Teléfono (123-123-123)" required><br><br><br><br><br>
+                  
+                    
                     <!-- <input type="datetime-local" name="datetime" required><br><br> -->
                     <?php
 
@@ -63,15 +65,18 @@
 
                       $mysqli = open_connection();
 
-                      $sql = "SELECT * FROM tHorario";
+                      $sql = "SELECT *
+                      FROM tHorario
+                      WHERE tHorario.reservado != 1";
                       $result = $mysqli->query($sql);
                       
                       if ($result->num_rows > 0){
-                        echo '<select name="horas" id="horas">';
+                         echo '<select name="hora_id">'; 
                         while($row = $result->fetch_assoc()){
-                          echo "<option name='hora' class='button-horario' value= ". $row['hora'] ." >". $row['hora'] . "</option>";
+                          
+                           echo "<option class='button-horario' value= ". $row['id'] ." >". $row['hora'] . "</option>"; 
                         }
-                        echo '</select><br>';
+                         echo '</select><br>'; 
                       }else{
                         echo "<p style='color:white;'>Sin resultados</p>";
                       }

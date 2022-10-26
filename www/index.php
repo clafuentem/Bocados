@@ -65,7 +65,7 @@ if(!empty($user_id)){
 
   <div class="main-div">
     <div class="div1">
-      <div><div class="abrir-menu"><a href="#" class="abrir">MENU<!-- <i class="fas fa-bars"></i> --></a></div></div>
+      <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
       <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
     </div>
   </div>
