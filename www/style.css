@@ -18,6 +18,10 @@
     
 }
 
+body{
+    background-image: url();
+}
+
 /* #sidebar a{
     text-decoration: none;
     color: aquamarine;
@@ -246,7 +250,7 @@ input[type='submit']{
 
 .datos-reserva > div{
     position: absolute;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);  
     width: 80%;
     height: 25%;
     top: 35%;

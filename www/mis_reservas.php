@@ -103,7 +103,6 @@ if(!empty($user_id)){
                                 </form>
                             </div>
                         ";
-
                     echo "</div>";
                }
               
