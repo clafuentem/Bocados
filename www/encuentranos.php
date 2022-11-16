@@ -58,31 +58,11 @@
 		</div>
 	  </div>
 	  <div id="register-box" >
+				
+		<h1 style="color: white ;">Encuentranos</h1><br>
 
-			<form method="post" action="do_reservas.php">
-			<?php
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1470.469677175015!2d-8.81218626916045!3d42.51409675102978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f6ab838dbc91d%3A0x2de048769975cd9a!2sPO-550%2C%2027%2C%2036630%20Cambados%2C%20Pontevedra!5e0!3m2!1ses!2ses!4v1668451683484!5m2!1ses!2ses" width="600" height="450" style="border:0; box-shadow: 8px 4px 5px #aaa;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-			  session_start();
-
-			  $user_id = $_SESSION['user_id'];
-
-			if ( ! empty( $user_id ) ) {
-				echo '<script src="functions.js"></script>';
-
-			} else {
-				echo '<h2 href="" style="color: white ;">Para poder hacer una reserva deberás estar registrado.</h2>
-                      <h3 style="color: white ;"><a href="">Registrate aquí!</a></h3>';
-
-			}
-
-			?>
-				<div class="reservas-form hide"  >
-				<h1 style="color: white ;">Encuentranos</h1><br>
-
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1470.469677175015!2d-8.81218626916045!3d42.51409675102978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f6ab838dbc91d%3A0x2de048769975cd9a!2sPO-550%2C%2027%2C%2036630%20Cambados%2C%20Pontevedra!5e0!3m2!1ses!2ses!4v1668451683484!5m2!1ses!2ses" width="600" height="450" style="border:0; box-shadow: 8px 4px 5px #aaa;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-				</div>
-			</form>
 	  </div>
 	</div>
   </div>

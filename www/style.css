@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     font-weight: 600;
 }
 
@@ -19,7 +19,10 @@
 }
 
 body{
-    background-image: url();
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/244/822/357/food-tomatoes-sauces-steak-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;  
 }
 
 /* #sidebar a{
@@ -49,7 +52,7 @@ li:hover{
     display: none;
 }
 
-#logout{
+/* #logout{
     position: absolute;
     padding: 15px;
     top: 25%;
@@ -61,21 +64,21 @@ li:hover{
 }
 
 
+
 .logout-button {
     position: relative;
 /*     border: 1px solid rebeccapurple; */
-    width: 100%;
+/*     width: 100%;
     height: 100%;
-}
+} */
 
-.logout-button div{
+/* .logout-button div{
     position: relative;
-/*     border: 1px solid red; */
-    width: 50%;
+     width: 50%;
     height: 50%;
-}
+}  */
 
-.logout-button > div > div{
+/* .logout-button > div > div{
     position: absolute;
     right: 0%;
 }
@@ -83,12 +86,11 @@ li:hover{
 .logout-button > div > div > a{
     text-decoration: none;
     border: #000 solid 1px;
-}
+}  */
 
 .abrir-menu{
-/*     border: orange 1px solid; */
-    height: 100%;
-    width: 50%;
+    border: orange 1px solid;
+    width: 10rem; 
 }
 
 .abrir-menu > a{
@@ -164,7 +166,7 @@ li a{
     background-color:#000;
 }
             
-li a:hover{
+.menu li a:hover{
     color:#000;
     background-color:#fff;
                 
@@ -291,6 +293,16 @@ select {
     background-color: #aaa;
 }
 
+#reserva-box{
+    background-color: #000;
+    z-index: 2;
+    color: #fff;
+    left: 25%;
+    top: 10%;
+    box-shadow: 15px 10px 5px #aaa;
+    border-radius: 5px;
+}
+
 #register{
     position: absolute;
     right: 40px;
@@ -350,10 +362,11 @@ select {
 
 
 .footer{
-    height: 8%;
-    position: fixed;
+    height: auto;
+    position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     background-color: #000;
     color: white;
@@ -363,29 +376,77 @@ select {
 
 .box-footer{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-.box1{
+.box-footer a{
+    position: relative;
+    top: 14px !important;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+/* .box1{
     display: flex;
     width: 36.5%;
     left: 32%;
     position: relative;
     padding: 15px; 
+} */
+
+.cancel-box{
+    margin-left: 42% ;
+    margin-top: 2%;
+    background-color: black;
+    border: solid 2px black;
+    border-radius: 3px;
+    box-shadow: #333 10px 10px;
+    color: #fff;
+    width: 300px;
 }
 
-.box1 div{
-    padding: 15px;
-/*     border: red solid 1px; */
-    position: relative;
-    left: 1.5rem;
+.cancel-box form{
+    
 }
 
-.box1 div a{
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+.container{
+    padding: 16px;
+    margin-left: 15%;
 }
 
-.box1 div a:hover{
-    color: rgb(174, 178, 181);
+
+@media only screen and (min-width: 600px)  {
+    iframe{
+        position:relative;
+        width: 300px;
+        height: 300px;
+    }
+    .box1 div{
+        width: 300px;
+    }
 }
