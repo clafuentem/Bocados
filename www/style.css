@@ -2,57 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
     font-weight: 600;
-}
-
-.div-background{
+  }
+  
+  .div-background{
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1;
-}
-
-.div-background img{
+  }
+  
+  .div-background img{
     object-fit: contain;
     
-}
-
-body{
-    background-image: url(https://c4.wallpaperflare.com/wallpaper/244/822/357/food-tomatoes-sauces-steak-wallpaper-preview.jpg);
+  }
+  
+  body{
+  /*     background-image: url(https://images4.alphacoders.com/235/235738.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment:fixed;  
-}
-
-/* #sidebar a{
+    background-attachment:fixed; 
+    background-position: center center;  */
+    background-color: #aaa;
+  }
+  
+  .menu-bars{
+    color: #fff !important;
+  }
+  
+  /* #sidebar a{
     text-decoration: none;
     color: aquamarine;
-}
-
-li{
+  }
+  
+  li{
     list-style-type: none;
     padding: 15px;
-}
-
-#sidebar li:hover{
+  }
+  
+  #sidebar li:hover{
     background-color: rgb(126, 125, 123);
-}
-
-li:hover{
+  }
+  
+  li:hover{
     background-color: rgb(126, 125, 123);
-} */
-
-
-.show{
+  } */
+  
+  
+  .show{
     display: block;
-}
-
-.hide{
+  }
+  
+  .hide{
     display: none;
-}
-
-/* #logout{
+  }
+  
+  #logout{
     position: absolute;
     padding: 15px;
     top: 25%;
@@ -61,60 +67,59 @@ li:hover{
     color: #fff;
     border-radius: 4px;
     box-shadow: 8px 8px 5px #aaa;
-}
-
-
-
-.logout-button {
+    text-decoration: none;
+    
+  }
+  
+  .logout-button {
     position: relative;
-/*     border: 1px solid rebeccapurple; */
-/*     width: 100%;
-    height: 100%;
-} */
-
-/* .logout-button div{
+    width: 100%;
+  } 
+  
+  .logout-button div{
     position: relative;
-     width: 50%;
+    width: 50%;
     height: 50%;
-}  */
-
-/* .logout-button > div > div{
+    margin-left: 70%;
+  }  
+  
+  /*  .logout-button > div > div{
     position: absolute;
     right: 0%;
-}
-
-.logout-button > div > div > a{
+  }
+  
+  .logout-button > div > div > a{
     text-decoration: none;
     border: #000 solid 1px;
-}  */
-
-.abrir-menu{
+  }  */ 
+  
+  .abrir-menu{
     border: orange 1px solid;
     width: 10rem; 
-}
-
-.abrir-menu > a{
+  }
+  
+  .abrir-menu > a{
     position: relative;
     top: 5%;
     left: 40%;
     text-decoration: none;
     color: #000;
     font-size: 32px;
-}
-
-.sidebar-hidden{
+  }
+  
+  .sidebar-hidden{
     display: none;
-}
-
-.sidebar-show{
+  }
+  
+  .sidebar-show{
     background-color: black;
     height: 100%;
     width: 300px;
     position: fixed;
     z-index: 3;
-}
-
-#sidebar .boton-cerrar {
+  }
+  
+  #sidebar .boton-cerrar {
     position: absolute;
     top: 0.5rem;
     right: 1rem;
@@ -129,34 +134,34 @@ li:hover{
     vertical-align: top;
     z-index: 999;
     color: brown;
-}
-
-.boton-cerrar:hover{
+  }
+  
+  .boton-cerrar:hover{
     background-color: rgb(126, 125, 123);
-}
-
-.carta-hidden{
+  }
+  
+  .carta-hidden{
     display: none;
-}
-
-.menu-list > ul{
+  }
+  
+  .menu-list > ul{
     top: 2.5rem;
     position: relative;
-}
-
-#carta-list{
+  }
+  
+  #carta-list{
     background-color: brown;
-}
-
-li{
+  }
+  
+  li{
     list-style-type:none;
     position:relative;
     width:100%;
     height: 100%;
     padding: 0.5rem;
-}
+  }
                 
-li a{
+  li a{
     text-decoration:none;
     display: inline-block;
     padding: 15px;
@@ -164,30 +169,30 @@ li a{
     border:1px solid #000;
     color:#fff;
     background-color:#000;
-}
+  }
             
-.menu li a:hover{
+  .menu li a:hover{
     color:#000;
     background-color:#fff;
                 
-}
-
-
-.login-box{
-/*     border: red solid 1px; */
+  }
+  
+  
+  .login-box{
+  /*     border: red solid 1px; */
     height: 300px;
     width: 100%;
-}
-
-.login-box div{
-/*     border: yellowgreen solid 1px; */
+  }
+  
+  .login-box div{
+  /*     border: yellowgreen solid 1px; */
     height: 150px;
-}
-
-input[type='email'], 
-input[type='password'],
-input[type='text'],
-input[type='date']{
+  }
+  
+  input[type='email'], 
+  input[type='password'],
+  input[type='text'],
+  input[type='date']{
     background-color: black;
     border: none;
     border-bottom: brown 1px solid;
@@ -197,9 +202,9 @@ input[type='date']{
     left: 6%;
     position: relative;
     color: white;
-}
-
-.register-form input{
+  }
+  
+  .register-form input{
     background-color: black;
     border: none;
     border-bottom: brown 1px solid;
@@ -210,13 +215,13 @@ input[type='date']{
     left: 8%;
     position: relative;
     color: white;
-}
-
-.register-form input[type='submit']{
+  }
+  
+  .register-form input[type='submit']{
     left: 8%;
-}
-
-.reservas-form input{
+  }
+  
+  .reservas-form input{
     background-color: black;
     border: none;
     border-bottom: brown 1px solid;
@@ -227,13 +232,13 @@ input[type='date']{
     left: 8%;
     position: relative;
     color: white;
-}
-
-.reservas-form input[type='submit']{
+  }
+  
+  .reservas-form input[type='submit']{
     left: 8%;
-}
-
-input[type='submit']{
+  }
+  
+  input[type='submit']{
     background-color: brown;
     border: none;
     padding: 15px;
@@ -242,15 +247,15 @@ input[type='submit']{
     left: 6%;
     position: relative;
     border-radius: 4px;
-}
-
-.datos-reserva{
+  }
+  
+  .datos-reserva{
     position: absolute;
     /* border: 1px solid red; */
     left: 25%;
-}
-
-.datos-reserva > div{
+  }
+  
+  .datos-reserva > div{
     position: absolute;
     border: 1px solid rgb(0, 0, 0);  
     width: 80%;
@@ -261,23 +266,23 @@ input[type='submit']{
     background-color: #000; 
     box-shadow: 15px 10px 5px #aaa;
     text-shadow: 5px 2px 5px #aaa;
-}
-
-.datos-reserva > div > label{
+  }
+  
+  .datos-reserva > div > label{
     position: relative;
     font-size: 24px;
     left: 20%;
     top: 10%;
     color: #fff;
-}
-
-#cancelar{
+  }
+  
+  #cancelar{
     position: absolute;
     left: 32.5% ;
     top: 70%;
-}
-
-select {
+  }
+  
+  select {
     position: absolute;
     border: 1px solid brown;
     color: white;
@@ -287,13 +292,13 @@ select {
     margin: 5px;
     border-radius: 6px;
     left: 8%;
-}
-
-.button-horario:hover {
+  }
+  
+  .button-horario:hover {
     background-color: #aaa;
-}
-
-#reserva-box{
+  }
+  
+  #reserva-box{
     background-color: #000;
     z-index: 2;
     color: #fff;
@@ -301,15 +306,15 @@ select {
     top: 10%;
     box-shadow: 15px 10px 5px #aaa;
     border-radius: 5px;
-}
-
-#register{
+  }
+  
+  #register{
     position: absolute;
     right: 40px;
     color: brown;
-}
-
-#register-box{
+  }
+  
+  #register-box{
     /* border: rgb(0, 0, 0) solid 1px; */
     background-color: #000;
     z-index: 2;
@@ -321,105 +326,203 @@ select {
     box-shadow: 15px 10px 5px #aaa;
     border-radius: 5px;
     display: flex;
-}
-
-#register-box div{
+  }
+  
+  #register-box div{
     /* border: red solid 1px; */
     width: 70%;
     height: 80%;
     position: absolute;
     left: 16%;
     top: 10%;
-}
-
-.general{
+  }
+  
+  .general{
     width: 100%;
     height: 100%;
-}
-
-.main-div{
-/*     border: red solid 1px; */
-    position: fixed;
+  }
+  
+  
+  .main-div{
+  /*     border: red solid 1px; */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 92%;
-}
-
-.main-div .div1{
-/*     border: blue solid 1px; */
+    height: 89.5%;
+  }
+  
+  .main-div .div1{
+    /*     border: blue solid 1px; */
+        width: 100%;
+        height: 10%;
+        display: flex;
+    }
+    
+    .main-div .div1 > div{
+    /*     border: rgb(0, 255, 21) solid 1px; */
+        width: 50%;
+        height: 100%;
+        display: flex;
+    }
+  
+  .entrantes{
     width: 100%;
-    height: 50%;
-    display: flex;
-}
+    background-color: red;
+  }
 
-.main-div .div1 > div{
-/*     border: rgb(0, 255, 21) solid 1px; */
-    width: 50%;
-    height: 100%;
-    display: flex;
-}
-
-
-.footer{
-    height: auto;
-    position: absolute;
+  .footer {
+    position:absolute;
+    height: 100px;
+    background:black;
+    color:white;
+    text-align:center;
+    left:0;
+    width:100%;
     bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #000;
-    color: white;
-    z-index: 99;
-}
-
-
-.box-footer{
+  }
+  
+  footer {
+    position:absolute;
+    height: 100px;
+    background:black;
+    color:white;
+    text-align:center;
+    left:0;
+    width:100%;
+  }
+  
+  footer.bottom {
+    bottom:0;
+  }
+  
+  .box-footer{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-}
-
-.box-footer a{
+    height: 100px;
+  }
+  
+  .box-footer a{
     position: relative;
     top: 14px !important;
-}
-
-.socials{
+  }
+  
+  .socials{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
-}
-
-.socials li{
+  }
+  
+  .socials li{
     margin: 0 10px;
-}
-
-.socials a{
+  }
+  
+  .socials a{
     text-decoration: none;
     color: #fff;
     padding: 5px;
-}
-
-.socials a i{
+  }
+  
+  .socials a i{
     font-size: 1.1rem;
     width: 20px;
     transition: color .4s ease;
-}
-
-/* .box1{
+  }
+  
+  .container1 {
+    max-width: 1200px;
+    padding: 1.5em;
+    top: 10%;
+    margin-left: 18%;
+  
+  }
+  
+  .menu {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+  }
+  
+  .menu-group-heading {
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc; 
+  }
+  
+  .menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+    
+  }
+  
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 4px;
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 5px;
+  }
+  
+  .menu-item {
+    display: flex;
+  }
+  
+  .menu-item-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+  }
+  
+  .menu-item-image:hover {
+    transform: scale(1.5,1.5);
+    cursor: pointer;
+  }
+  
+  .menu-item-text {
+    flex-grow: 1;
+  }
+  
+  .menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  
+  .menu-item-name {
+    margin-right: 1.5em;
+  }
+  
+  .menu-item-description {
+    line-height: 1.6;
+  }
+  
+  
+  /* .box1{
     display: flex;
     width: 36.5%;
     left: 32%;
     position: relative;
     padding: 15px; 
-} */
-
-.cancel-box{
+  } */
+  
+  .cancel-box{
     margin-left: 42% ;
     margin-top: 2%;
     background-color: black;
@@ -428,19 +531,35 @@ select {
     box-shadow: #333 10px 10px;
     color: #fff;
     width: 300px;
-}
-
-.cancel-box form{
+  }
+  
+  .cancel-box form{
     
-}
-
-.container{
+  }
+  
+  .container{
     padding: 16px;
     margin-left: 15%;
-}
-
-
-@media only screen and (min-width: 600px)  {
+  }
+  
+  
+  
+  @media screen and (min-width: 992px) {
+  
+  
+    .menu {
+      font-size: 16px;
+    }
+  
+    .menu-group {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .menu-item-image {
+      width: 125px;
+      height: 125px;
+    }
+  
     iframe{
         position:relative;
         width: 300px;
@@ -449,4 +568,5 @@ select {
     .box1 div{
         width: 300px;
     }
-}
+  }
+  

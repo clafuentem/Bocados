@@ -22,7 +22,7 @@
 		<li><a href="index.php">Inicio</a></li>
 		<li><a href="reservas.php">Reservas</a></li>
 		<li id="mis-reservas" class="hide"><a href="mis_reservas.php">Mis Reservas</a></li>
-		<li><a href="#" >Carta  <i id="carta" style="font-size:16p" class="far">&#xf150;</i></a>
+		<li><a href="#" >Carta  <i id="carta" style="font-size:16p" class="fa">&#xf150;</i></a>
 			  <ul id="carta-list" class="carta-hidden">
 				  <li><a href="entrantes.php">Entrantes</a></li>
 				  <li><a href="carnes.php">Carnes</a></li>
@@ -49,7 +49,7 @@
 
   <div class="main-div">
 	<div class="div1">
-	  <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
+	  <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars menu-bars"></i></a></div></div>
 	  <div class="logout-button">
 		<div>
 		</div>
@@ -71,7 +71,7 @@
 
 			} else {
 				echo '<h2 href="" style="color: white ;">Para poder hacer una reserva deberás estar registrado.</h2>
-                      <h3 style="color: white ;"><a href="">Registrate aquí!</a></h3>';
+                      <h3 style="color: white ;"><a href="register.php">Registrate aquí!</a></h3>';
 
 			}
 
@@ -80,7 +80,7 @@
 				<h1 style="color: white ;">Reservas</h1>
 					<input type="text" name="name" placeholder="Nombre" required><br><br>
 					<input type="text" name="surname" placeholder="Apellidos" ><br><br>
-					<input type="text" name="telf" placeholder="Nº Teléfono (123-123-123)" required><br><br><br><br><br>
+					<input type="text" name="telf" placeholder="Nº Teléfono" required><br><br><br><br><br>
 
 					<?php
 
@@ -115,20 +115,22 @@
 	</div>
   </div>
 
-  <div class="footer">
-	<div class="box-footer">
-	  <div class="box1">
-		<div><p><a href="aviso.php">Aviso legal</a></p></div>
-		<div><p><a href="condiciones.php">Condiciones de compra</a></p></div>
-		<div><p><a href="privacidad.php">Política de privacidad</a></p></div>
-		<div><p><a href="cookies.php">Política de cookies</a></p></div>
-	  </div>
-	</div>
-  </div>
-  </div>
+
 
 </body>
 
+<footer class="footer">
+  <div class="box-footer">
+		  <ul class="socials">
+			<li><a href="#">Aviso legal</a></li>
+			<li><a href="#">Condiciones de compra</a></li>
+			<li><a href="#">Política de privacidad</a></li>
+			<li><a href="#">Política de cookies</a></li>
+		  </ul>
+		</div>
+	  </div>
+  </div>
+</footer>
 
 
 </html>

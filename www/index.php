@@ -1,9 +1,14 @@
 <?php
+
+error_reporting( 0 );
+
+
   require 'db_connection.php';
 
   $mysqli = open_connection();
   close_connection( $mysqli );
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +19,7 @@
 <link rel="icon" href="favicon.ico"> 
 <link href="style.css" rel="stylesheet">
 <script src="menu.js"></script>
+<script src="prueba.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 	<title>Bocados</title>
 </head>
@@ -66,36 +72,35 @@ if ( ! empty( $user_id ) ) {
   </div>
 
   <div class="main-div">
-	<div class="div1">
-	  <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
+  <div class="div1 ">
+	  <div>
+		<div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars menu-bars"></i></a></div>
+	  </div>
 	  <div class="logout-button">
+
 		<div>
+		  <a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a>
 		</div>
-		<div>
-		  <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
-		</div>
+ 
 	  </div>
 	</div>
-  </div>
 
-  <div class="footer">
-	<div class="box-footer">
-<!-- 		<p><a href="aviso.php">Aviso legal</a></p>
-		<p><a href="condiciones.php">Condiciones de compra</a></p>
-		<p><a href="privacidad.php">Política de privacidad</a></p>
-		<p><a href="cookies.php">Política de cookies</a></p> -->
-		<ul class="socials">
-			<li><a href="#">Aviso legal</a></li>
-			<li><a href="#">Condiciones de compra</a></li>
-			<li><a href="#">Política de privacidad</a></li>
-			<li><a href="#">Política de cookies</a></li>
-		</ul>
-	</div>
-  </div>
   </div>
 
 </body>
 
+<footer class="footer">
+  <div class="box-footer">
+		  <ul class="socials">
+			<li><a href="#">Aviso legal</a></li>
+			<li><a href="#">Condiciones de compra</a></li>
+			<li><a href="#">Política de privacidad</a></li>
+			<li><a href="#">Política de cookies</a></li>
+		  </ul>
+		</div>
+	  </div>
+  </div>
+</footer>
 
 
 </html>

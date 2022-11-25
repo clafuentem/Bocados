@@ -55,7 +55,7 @@
 
   <div class="main-div">
     <div class="div1">
-    <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
+	  <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars menu-bars"></i></a></div></div>
       <div class="logout-button">
         <div>
         </div>
@@ -80,14 +80,18 @@
   </div>
 
   <div class="footer">
-    <div class="box-footer">
-      <div class="box1">
-        <div><p><a href="aviso.php">Aviso legal</a></p></div>
-        <div><p><a href="condiciones.php">Condiciones de compra</a></p></div>
-        <div><p><a href="privacidad.php">Política de privacidad</a></p></div>
-        <div><p><a href="cookies.php">Política de cookies</a></p></div>
-      </div>
-    </div>
+	<div class="box-footer">
+<!-- 		<p><a href="aviso.php">Aviso legal</a></p>
+		<p><a href="condiciones.php">Condiciones de compra</a></p>
+		<p><a href="privacidad.php">Política de privacidad</a></p>
+		<p><a href="cookies.php">Política de cookies</a></p> -->
+		<ul class="socials">
+			<li><a href="#">Aviso legal</a></li>
+			<li><a href="#">Condiciones de compra</a></li>
+			<li><a href="#">Política de privacidad</a></li>
+			<li><a href="#">Política de cookies</a></li>
+		</ul>
+	</div>
   </div>
   </div>
 

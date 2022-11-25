@@ -59,7 +59,8 @@ if ( ! empty( $user_id ) ) {
   </div>
 
   <div class="main-div">
-	  <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars"></i></a></div></div>
+
+  <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars menu-bars"></i></a></div></div>
 	  <div class="logout-button">
 		<div>
 		</div>
@@ -77,7 +78,7 @@ if ( ! empty( $user_id ) ) {
 
 			$user_id = $_SESSION['user_id'];
 
-			$sql  = 'SELECT tReservas.id, tUser.name, tUser.telf, tHorario.hora 
+			$sql  = 'SELECT tReservas.id, tReservas.id_horario, tUser.name, tUser.telf, tHorario.hora
                     FROM tHorario 
                     INNER JOIN tReservas 
                     ON tHorario.id = tReservas.id_horario 
@@ -102,7 +103,7 @@ if ( ! empty( $user_id ) ) {
 											<label>Nº de teléfono.: ' . $row['telf'] . '</label><br><br>
 											<input type="hidden" name="telf" value='. $row['telf'] .'>
 											<label>Hora.: ' . $row['hora'] . '</label><br><br>
-											<input type="hidden" name="hour" value='. $row['hora'] .'>
+											<input type="hidden" name="id_horario" value='. $row['id_horario'] .'>
 											<input id="" type="submit" value="Cancelar Reserva" >
 										</form>
 									</div>
@@ -120,12 +121,16 @@ if ( ! empty( $user_id ) ) {
 
   <div class="footer">
 	<div class="box-footer">
-	  <div class="box1">
-		<div><p><a href="aviso.php">Aviso legal</a></p></div>
-		<div><p><a href="condiciones.php">Condiciones de compra</a></p></div>
-		<div><p><a href="privacidad.php">Política de privacidad</a></p></div>
-		<div><p><a href="cookies.php">Política de cookies</a></p></div>
-	  </div>
+<!-- 		<p><a href="aviso.php">Aviso legal</a></p>
+		<p><a href="condiciones.php">Condiciones de compra</a></p>
+		<p><a href="privacidad.php">Política de privacidad</a></p>
+		<p><a href="cookies.php">Política de cookies</a></p> -->
+		<ul class="socials">
+			<li><a href="#">Aviso legal</a></li>
+			<li><a href="#">Condiciones de compra</a></li>
+			<li><a href="#">Política de privacidad</a></li>
+			<li><a href="#">Política de cookies</a></li>
+		</ul>
 	</div>
   </div>
   </div>

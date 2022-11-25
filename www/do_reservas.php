@@ -30,11 +30,10 @@ try {
 	if ( $stmt2->affected_rows === 0 ) {
 		die( $hora_id );
 	}
-	header( 'Location: index.php' );
+
 	$stmt2->close();
 
-
-	header( 'Location: index.php' );
+	header( 'Location: mis_reservas.php' );
 
 	mysqli_close( $mysqli );
 
