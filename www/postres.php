@@ -8,12 +8,14 @@
 <link rel="icon" href="favicon.ico"> 
 <link href="style.css" rel="stylesheet">
 <script src="menu.js"></script>
+
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 	<title>Bocados</title>
 </head>
 
 <body>
 <?php
+error_reporting( 0 );
 
 session_start();
 
@@ -48,6 +50,7 @@ if ( ! empty( $user_id ) ) {
 			<div class="login">
 			  <input type="text" name="mail" placeholder="Email"><br><br>
 			  <input type="password" name="password" placeholder="Contraseña">
+        <input type="hidden" name="url" value="postres.php">
 			</div>
 			<input type="submit" value="Iniciar sesión">
 		  </form>
@@ -57,129 +60,215 @@ if ( ! empty( $user_id ) ) {
 	</div>
   </div>
 
-  <div class="container1">
-    <div class="menu">
+<div class="main-div">
+    <div class="div1 ">
+      <div>
+      <div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars menu-bars"></i></a></div>
+      </div>
+      <div class="logout-button">
+
+      <div>
+        <a id="logout" class="hide" href="do_logout.php" value="postres.php">Cerrar sesión</a>
+      </div>
+  
+      </div>
+    </div>
+
+    <div class="container1">
+      <div class="menu">
 
       <h2 class="menu-group-heading">
-        Entrantes
+        Carnes
       </h2>
       <div class="menu-group">
+
         <div class="menu-item">
-          <img class="menu-item-image" src="https://img.cocinarico.es/2020-07/steak-tartar-1.jpg" alt="Bruschetta">
-          <div class="menu-item-text">
-            <h3 class="menu-item-heading">
-              <span class="menu-item-name">Tataki de Buey</span>
-              <span class="menu-item-price">19.90 €</span>
-            </h3>
-            <p class="menu-item-description">
-                Carne cruda la cual se condimenta con especias y otros ingredientes 
-                como salsas y encurtidos, para acompañarse finalmente de huevo crudo.
-            </p>
-          </div>
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
         </div>
 
         <div class="menu-item">
-          <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
-          <div class="menu-item-text">
-            <h3 class="menu-item-heading">
-              <span class="menu-item-name">Carpaccio de Buey</span>
-              <span class="menu-item-price">27.90€</span>
-            </h3>
-            <p class="menu-item-description">
-                Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
-                y parmesano.
-            </p>
-          </div>
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
         </div>
 
         <div class="menu-item">
-          <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
-          <div class="menu-item-text">
-            <h3 class="menu-item-heading">
-              <span class="menu-item-name">Carpaccio de Buey</span>
-              <span class="menu-item-price">27.90€</span>
-            </h3>
-            <p class="menu-item-description">
-                Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
-                y parmesano.
-            </p>
-          </div>
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
         </div>
 
         <div class="menu-item">
-          <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
-          <div class="menu-item-text">
-            <h3 class="menu-item-heading">
-              <span class="menu-item-name">Carpaccio de Buey</span>
-              <span class="menu-item-price">27.90€</span>
-            </h3>
-            <p class="menu-item-description">
-                Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
-                y parmesano.
-            </p>
-          </div>
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
         </div>
 
         <div class="menu-item">
-          <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
-          <div class="menu-item-text">
-            <h3 class="menu-item-heading">
-              <span class="menu-item-name">Carpaccio de Buey</span>
-              <span class="menu-item-price">27.90€</span>
-            </h3>
-            <p class="menu-item-description">
-                Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
-                y parmesano.
-            </p>
-          </div>
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
         </div>
 
         <div class="menu-item">
-          <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
-          <div class="menu-item-text">
-            <h3 class="menu-item-heading">
-              <span class="menu-item-name">Carpaccio de Buey</span>
-              <span class="menu-item-price">27.90€</span>
-            </h3>
-            <p class="menu-item-description">
-                Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
-                y parmesano.
-            </p>
-          </div>
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
         </div>
-      
+        </div>
 
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+      </div>
     </div>
-  </div>
 
-  <div class="main-div">
-  <div class="div1 ">
-	  <div><div class="abrir-menu"><a href="#" class="abrir"><i class="fas fa-bars menu-bars"></i></a></div></div>
-	  <div class="logout-button">
-		<div>
-		</div>
-		<div>
-		  <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
-		</div>
-	  </div>
-	</div>
-  </div>
+</div>
+</body>
 
 
-
-  <div class="footer">
-	<div class="box-footer">
-		<ul class="socials">
+<footer>
+  <div class="box-footer-carta">
+		  <ul class="socials">
 			<li><a href="#">Aviso legal</a></li>
-			<li><a href="#">Condiciones de compra</a></li>
+			<li><a href="#">Condiciones legales</a></li>
 			<li><a href="#">Política de privacidad</a></li>
 			<li><a href="#">Política de cookies</a></li>
-		</ul>
-	</div>
+		  </ul>
+		</div>
+	  </div>
   </div>
-  </div>
-
-</body>
+</footer>
 
 </html>
 

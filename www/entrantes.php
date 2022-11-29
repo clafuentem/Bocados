@@ -8,7 +8,7 @@
 <link rel="icon" href="favicon.ico"> 
 <link href="style.css" rel="stylesheet">
 <script src="menu.js"></script>
-<script src="footer.js"></script>
+
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 	<title>Bocados</title>
 </head>
@@ -50,6 +50,7 @@ if ( ! empty( $user_id ) ) {
 			<div class="login">
 			  <input type="text" name="mail" placeholder="Email"><br><br>
 			  <input type="password" name="password" placeholder="Contraseña">
+        <input type="hidden" name="url" value="entrantes.php">
 			</div>
 			<input type="submit" value="Iniciar sesión">
 		  </form>
@@ -67,17 +68,18 @@ if ( ! empty( $user_id ) ) {
       <div class="logout-button">
 
       <div>
-        <a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a>
+        <a id="logout" class="hide" href="do_logout.php" value="entrantes">Cerrar sesión</a>
       </div>
   
       </div>
     </div>
 
     <div class="container1">
+
       <div class="menu">
 
       <h2 class="menu-group-heading">
-        Carnes
+        Entrantes
       </h2>
       <div class="menu-group">
 
@@ -113,7 +115,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Tartar de Buey</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -127,7 +129,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Croquetas variadas</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -141,7 +143,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Croquetas de jamón</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -155,7 +157,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Croquetas de marisco</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -169,7 +171,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Croquetas de choco</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -183,7 +185,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Empanada de pulpo</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -197,7 +199,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Empanada de atún</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -211,33 +213,7 @@ if ( ! empty( $user_id ) ) {
         <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
         <div class="menu-item-text">
           <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
-          <span class="menu-item-price">27.90€</span>
-          </h3>
-          <p class="menu-item-description">
-            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
-            y parmesano.
-          </p>
-        </div>
-        </div>
-        <div class="menu-item">
-        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
-          <span class="menu-item-price">27.90€</span>
-          </h3>
-          <p class="menu-item-description">
-            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
-            y parmesano.
-          </p>
-        </div>
-        </div>
-        <div class="menu-item">
-        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-          <span class="menu-item-name">Carpaccio de Buey</span>
+          <span class="menu-item-name">Langostinos kataify</span>
           <span class="menu-item-price">27.90€</span>
           </h3>
           <p class="menu-item-description">
@@ -247,27 +223,81 @@ if ( ! empty( $user_id ) ) {
         </div>
         </div>
 
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Pan bao de cerdo</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Pan bao de ternera</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Pulpo á feira</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
+
+        <div class="menu-item">
+        <img class="menu-item-image" src="https://cdn.cookmonkeys.es/recetas/medium/carpaccio-de-buey-3-8411.jpg" alt="Bruschetta">
+        <div class="menu-item-text">
+          <h3 class="menu-item-heading">
+          <span class="menu-item-name">Pulpo a la brasa</span>
+          <span class="menu-item-price">27.90€</span>
+          </h3>
+          <p class="menu-item-description">
+            Una preparación de carne cruda de Buey, finamente cortada y acompañada de rúcula
+            y parmesano.
+          </p>
+        </div>
+        </div>
 
       </div>
     </div>
 
 </div>
+</body>
+
 
 <footer>
-  <div class="box-footer">
+  <div class="box-footer-carta">
 		  <ul class="socials">
-			<li><a href="#">Aviso legal</a></li>
-			<li><a href="#">Condiciones de compra</a></li>
-			<li><a href="#">Política de privacidad</a></li>
-			<li><a href="#">Política de cookies</a></li>
+			<li><a href="alegal.php">Aviso legal</a></li>
+			<li><a href="clegales.php">Condiciones legales</a></li>
+			<li><a href="pprivacidad.php">Política de privacidad</a></li>
+			<li><a href="pcookies.php">Política de cookies</a></li>
 		  </ul>
 		</div>
 	  </div>
   </div>
 </footer>
-
-
-</body>
 
 </html>
 

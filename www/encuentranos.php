@@ -38,6 +38,7 @@
 			<div class="login">
 			  <input type="text" name="mail" placeholder="Email"><br><br>
 			  <input type="password" name="password" placeholder="Contraseña">
+			  <input type="hidden" name="url" value="encuentranos.php">
 			</div>
 			<input type="submit" value="Iniciar sesión">
 		  </form>
@@ -54,7 +55,7 @@
 		<div>
 		</div>
 		<div>
-		  <div><a id="logout" class="hide" href="do_logout.php">Cerrar sesión</a></div>
+		  <div><a id="logout" class="hide" href="do_logout.php" value="encuentranos.php">Cerrar sesión</a></div>
 		</div>
 	  </div>
 	  <div id="register-box" >
@@ -70,12 +71,12 @@
   <div class="footer">
 	<div class="box-footer">
 <!-- 		<p><a href="aviso.php">Aviso legal</a></p>
-		<p><a href="condiciones.php">Condiciones de compra</a></p>
+		<p><a href="condiciones.php">Condiciones legales</a></p>
 		<p><a href="privacidad.php">Política de privacidad</a></p>
 		<p><a href="cookies.php">Política de cookies</a></p> -->
 		<ul class="socials">
 			<li><a href="#">Aviso legal</a></li>
-			<li><a href="#">Condiciones de compra</a></li>
+			<li><a href="#">Condiciones legales</a></li>
 			<li><a href="#">Política de privacidad</a></li>
 			<li><a href="#">Política de cookies</a></li>
 		</ul>

@@ -22,7 +22,7 @@ try {
 	$stmt->execute();
 	$stmt->close();
 
-	$reservado = 1;
+	
 	$sql_2     = 'UPDATE tHorario SET reservado = 1 WHERE id = ? ';
 	$stmt2     = $mysqli->prepare( $sql_2 );
 	$stmt2->bind_param( 'i', $hora_id );

@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 try {
 
 	include 'db_connection.php';
@@ -8,10 +8,11 @@ try {
 
 	$email    = $_POST['mail'];
 	$password = $_POST['password'];
+	$url 	  = $_POST['url'];
 
 
-	$stmt = $mysqli->prepare( 'SELECT id, email, encrypted_password FROM tUser WHERE email = ?' );
-	$stmt->bind_param( 's', $email );
+	$stmt = $mysqli->prepare('SELECT id, email, encrypted_password FROM tUser WHERE email = ?');
+	$stmt->bind_param('s', $email);
 	$stmt->execute();
 	$result             = $stmt->get_result();
 	$sql                = $result->fetch_array();
@@ -19,25 +20,21 @@ try {
 	$encrypted_password = $sql['encrypted_password'];
 
 
-	if ( ( $result->num_rows ) == 0 ) {
-		die( 'No existe una cuenta con este email' );
+	if (($result->num_rows) == 0) {
+		die('No existe una cuenta con este email');
 	} else {
 
-		if ( password_verify( $password, $encrypted_password ) ) {
+		if (password_verify($password, $encrypted_password)) {
 			session_start();
 			$_SESSION['user_id'] = $id;
-			header( "Location: ./" );
-			exit();
+			header("Location: $url");
+			exit;
 		} else {
-			die( 'Contraseña incorrecta' );
+			die('Contraseña incorrecta');
 		}
 	}
-		$stmt->close();
-} catch ( Exception $e ) {
+	$stmt->close();
+} catch (Exception $e) {
 
 	echo "<script>alert('Ha ocurrido un error inesperado');</script>";
-
 }
-
-
-
