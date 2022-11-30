@@ -82,7 +82,7 @@
 
 			$mysqli = open_connection();
 
-			$sql  = 'SELECT tReservas.id, tReservas.id_horario, tUser.name, tUser.telf, tHorario.hora
+			$sql  = 'SELECT tReservas.id, tReservas.id_horario, tReservas.pax, tUser.name, tUser.telf, tHorario.hora
 							FROM tHorario 
 							INNER JOIN tReservas 
 							ON tHorario.id = tReservas.id_horario 
@@ -104,6 +104,8 @@
 													<input type="hidden" name="id" value=' . $row['id'] . '>
 													<label>Nombre.:  ' . $row['name'] . '</label><br><br>
 													<input type="hidden" name="name" value=' . $row['name'] . '>
+													<label>Personas.:  ' . $row['pax'] . '</label><br><br>
+													<input type="hidden" name="name" value=' . $row['pax'] . '>
 													<label>Nº de teléfono.: ' . $row['telf'] . '</label><br><br>
 													<input type="hidden" name="telf" value=' . $row['telf'] . '>
 													<label>Hora.: ' . $row['hora'] . '</label><br><br>

@@ -97,19 +97,19 @@ close_connection($mysqli);
           <img src="/img/corte_de_carne.jpg" alt="">
         </div>
         <div>
-          <img src="/img/tartar2.jpg" alt="">
+          <img src="/img/tartar.jpg" alt="">
         </div>
         <div>
-          <h3>3</h3>
+        <img src="/img/t-bone.jpg" alt="">
         </div>
         <div>
-          <h3>4</h3>
+        <img src="/img/lenguado.JPG" alt="">
         </div>
         <div>
-          <h3>5</h3>
+        <img src="/img/tiramisu.jpg" alt="">
         </div>
         <div>
-          <h3>6</h3>
+        <img src="/img/vino.jpg" alt="">
         </div>
       </div>
     </div>

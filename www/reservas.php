@@ -81,16 +81,46 @@
 
 			}
 
+
 			?>
 				<div class="reservas-form hide"  >
 				<h1 style="color: white ;">Reservas</h1>
-					<input type="text" name="name" placeholder="Nombre" required><br><br>
-					<input type="text" name="surname" placeholder="Apellidos" ><br><br>
-					<input type="text" name="telf" placeholder="Nº Teléfono" required><br><br><br><br><br>
+				<?php
+					  require 'db_connection.php';
 
+					  $mysqli = open_connection();
+
+					  $query = 'SELECT name, surname, telf FROM tuser WHERE id = '.$user_id.'';
+					  $result = $mysqli->query( $query );
+
+					  if ( $result->num_rows > 0 ) {
+						while ( $row = $result->fetch_assoc() ) {
+
+							echo '	<input type="text" name="name" placeholder="Nombre" value="'.$row['name'].'" required><br><br>
+									<input type="text" name="surname" placeholder="Apellidos" value="'.$row['surname'].'"><br><br><br><br><br>
+									<label for="">Personas</label><br>
+									<select name="pax">
+										<option class="buton-horario" value="1">1</option>
+										<option class="buton-horario" value="2">2</option>
+										<option class="buton-horario" value="3">3</option>
+										<option class="buton-horario" value="4">4</option>
+										<option class="buton-horario" value="5">5</option>
+										<option class="buton-horario" value="6">6</option>
+									</select>
+									<input type="text" name="telf" placeholder="Nº Teléfono" value="'.$row['telf'].'" required><br><br><br><br>
+									';
+						}
+						
+					}
+					close_connection( $mysqli );
+
+				?>
+
+
+					
 					<?php
 
-					  require 'db_connection.php';
+					  
 
 					  $mysqli = open_connection();
 
@@ -114,6 +144,7 @@
 					  close_connection( $mysqli );
 
 					?>
+
 					<input type="submit" id="boton-regis" value="Reservar">
 				</div>
 			</form>

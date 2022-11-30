@@ -1,7 +1,7 @@
 <?php
 
-error_reporting( E_ALL );
-ini_set( 'display_errors', 1 );
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 try {
 
@@ -14,34 +14,29 @@ try {
 	$surname = $_POST['surname'];
 	$telf    = $_POST['telf'];
 	$hora_id = $_POST['hora_id'];
+	$pax 	 = $_POST['pax'];
 
 
-	$sql  = 'INSERT INTO tReservas (name, surname, telf, id_horario, id_user) VALUES ( ?, ?, ?, ?, ?) ';
-	$stmt = $mysqli->prepare( $sql );
-	$stmt->bind_param( 'sssii', $name, $surname, $telf, $hora_id, $user_id );
+	$sql  = 'INSERT INTO tReservas (name, surname, telf, id_horario, id_user, pax) VALUES ( ?, ?, ?, ?, ?, ?) ';
+	$stmt = $mysqli->prepare($sql);
+	$stmt->bind_param('sssiii', $name, $surname, $telf, $hora_id, $user_id, $pax);
 	$stmt->execute();
 	$stmt->close();
 
-	
+
 	$sql_2     = 'UPDATE tHorario SET reservado = 1 WHERE id = ? ';
-	$stmt2     = $mysqli->prepare( $sql_2 );
-	$stmt2->bind_param( 'i', $hora_id );
+	$stmt2     = $mysqli->prepare($sql_2);
+	$stmt2->bind_param('i', $hora_id);
 	$stmt2->execute();
-	if ( $stmt2->affected_rows === 0 ) {
-		die( $hora_id );
+	if ($stmt2->affected_rows === 0) {
+		die($hora_id);
 	}
 
 	$stmt2->close();
 
-	header( 'Location: mis_reservas.php' );
+	header('Location: mis_reservas.php');
 
-	mysqli_close( $mysqli );
-
-} catch ( Exception $e ) {
+	mysqli_close($mysqli);
+} catch (Exception $e) {
 	echo "<script>alert('Ha ocurrido un error inesperado');</script>";
 }
-
-
-
-
-
