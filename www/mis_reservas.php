@@ -116,7 +116,12 @@
 										</div>	';
 				}
 			} else {
-				echo "<p'>No hay resultados</p>";
+				echo '<div class = "cancel-box" >
+						<div class = "container">
+							<h3>No hay resultados</h3><br>
+							<p>Haz tu reserva <a style="color: brown;" href="reservas.php">aquí</a></p>
+						</div>
+					 </div>';
 			}
 
 			close_connection($mysqli);

@@ -66,10 +66,12 @@
       </div>
       <div id="register-box">
             <form method="post" action="do_register.php">
+            
                 <div class="register-form">
+                <h1 style="color: white;">Registro</h1>
                     <input type="text" name="name" placeholder="Nombre" required><br><br>
                     <input type="text" name="surname" placeholder="Apellidos" ><br><br>
-                    <input type="text" name="telf" placeholder="Nº Teléfono (123-123-123)" required><br><br>
+                    <input type="text" name="telf" placeholder="Nº Teléfono" required><br><br>
                     <input type="text" name="email" placeholder="Email" required><br><br>
                     <input type="password" name="pswd" placeholder="Contraseña" required><br><br>
                     <input type="password" name="pswd2" placeholder="Confirmar contraseña" required><br><br>
@@ -82,10 +84,6 @@
 
   <div class="footer">
 	<div class="box-footer">
-<!-- 		<p><a href="aviso.php">Aviso legal</a></p>
-		<p><a href="condiciones.php">Condiciones legales</a></p>
-		<p><a href="privacidad.php">Política de privacidad</a></p>
-		<p><a href="cookies.php">Política de cookies</a></p> -->
 		<ul class="socials">
 			<li><a href="#">Aviso legal</a></li>
 			<li><a href="#">Condiciones legales</a></li>

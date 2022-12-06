@@ -61,7 +61,6 @@ close_connection($mysqli);
           </li>
           <li><a href="nosotros.php">Nosotros</a></li>
           <li><a href="contacto.php">Contacto</a></li>
-          <li><a href="encuentranos.php">Encuentranos</a></li>
           <li><a href="#" id="login">Iniciar sesión</a></li>
           <div class="login-box">
             <form method="post" action="do_login.php">
@@ -91,7 +90,7 @@ close_connection($mysqli);
 
         </div>
       </div>
-      <h1>BOCADOS</h1>
+      <h1 class="h1-title">BOCADOS</h1>
       <div class="slider">
         <div>
           <img src="/img/corte_de_carne.jpg" alt="">
@@ -100,16 +99,16 @@ close_connection($mysqli);
           <img src="/img/tartar.jpg" alt="">
         </div>
         <div>
-        <img src="/img/t-bone.jpg" alt="">
+          <img src="/img/t-bone.jpg" alt="">
         </div>
         <div>
-        <img src="/img/lenguado.JPG" alt="">
+          <img src="/img/lenguado.JPG" alt="">
         </div>
         <div>
-        <img src="/img/tiramisu.jpg" alt="">
+          <img src="/img/tiramisu.jpg" alt="">
         </div>
         <div>
-        <img src="/img/vino.jpg" alt="">
+          <img src="/img/vino.jpg" alt="">
         </div>
       </div>
     </div>
