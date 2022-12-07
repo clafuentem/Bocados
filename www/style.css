@@ -34,7 +34,7 @@
   .h1-title{
     margin-left: 45%;
     font-size: 40px;
-    text-shadow: rgb(255, 0, 0) 8px 2px 8px;
+    text-shadow: #ff0000 8px 2px 8px;
   }
   
   .menu-bars{
@@ -168,7 +168,7 @@
   }
   
   .boton-cerrar:hover{
-    background-color: rgb(126, 125, 123);
+    background-color: #7e7d7b;
   }
   
   .carta-hidden{
@@ -181,7 +181,7 @@
   }
   
   #carta-list{
-    background-color: brown;
+    background-color: #a52a2a;
   }
   
   .menu-list li{
