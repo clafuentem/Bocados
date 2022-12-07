@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 26, 2022 at 06:42 PM
--- Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1
--- PHP Version: 7.4.30
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 07-12-2022 a las 12:58:52
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,26 +18,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bocadosDB`
+-- Base de datos: `bocadosdb`
 --
+CREATE DATABASE IF NOT EXISTS `bocadosdb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `bocadosdb`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tHorario`
+-- Estructura de tabla para la tabla `thorario`
 --
 
-CREATE TABLE `tHorario` (
+CREATE TABLE `thorario` (
   `id` int(11) NOT NULL,
   `hora` time NOT NULL,
   `reservado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tHorario`
+-- Volcado de datos para la tabla `thorario`
 --
 
-INSERT INTO `tHorario` (`id`, `hora`, `reservado`) VALUES
+INSERT INTO `thorario` (`id`, `hora`, `reservado`) VALUES
 (1, '12:00:00', 0),
 (2, '12:30:00', 0),
 (3, '13:00:00', 0),
@@ -50,14 +52,15 @@ INSERT INTO `tHorario` (`id`, `hora`, `reservado`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tReservas`
+-- Estructura de tabla para la tabla `treservas`
 --
 
-CREATE TABLE `tReservas` (
+CREATE TABLE `treservas` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `surname` varchar(255) DEFAULT NULL,
   `telf` varchar(9) NOT NULL,
+  `pax` int(2) NOT NULL,
   `id_horario` int(11) NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -65,83 +68,84 @@ CREATE TABLE `tReservas` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tUser`
+-- Estructura de tabla para la tabla `tuser`
 --
 
-CREATE TABLE `tUser` (
+CREATE TABLE `tuser` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `surname` varchar(100) NOT NULL,
   `telf` varchar(30) NOT NULL,
   `email` varchar(200) NOT NULL,
-  `encrypted_password` varchar(100) NOT NULL,
-  `active_session_token` char(20) DEFAULT NULL
+  `encrypted_password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tUser`
+-- Volcado de datos para la tabla `tuser`
 --
 
-INSERT INTO `tUser` (`id`, `name`, `surname`, `telf`, `email`, `encrypted_password`, `active_session_token`) VALUES
-(3, 'Cristian', 'Lafuente', '666666666', 'clm@gmail.com', '$2y$10$/j1MIOQp2zPajkSRCoeYgu71OuIsEo7QB3DJFQfeFhflaEHvRcN3W', NULL);
+INSERT INTO `tuser` (`id`, `name`, `surname`, `telf`, `email`, `encrypted_password`) VALUES
+(3, 'Cristian', 'Lafuente', '666666666', 'clm@gmail.com', '$2y$10$/j1MIOQp2zPajkSRCoeYgu71OuIsEo7QB3DJFQfeFhflaEHvRcN3W'),
+(4, 'Sonia', 'Plaza Ríos', '696407849', 'sonia@gmail.com', '$2y$10$.T1FjhYngIglgqvbFw74L.xOvGh9.MoikGVSaUP.7S07XdudhXjm.'),
+(5, 'prueba', 'prueba', '640890123', 'prueba@gmail.com', '$2y$10$fXRDi.EHYjoRSWSDdd.9Pe0kZTd/8dTmzUlpooFGzqpCfdwtkPgKW');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `tHorario`
+-- Indices de la tabla `thorario`
 --
-ALTER TABLE `tHorario`
+ALTER TABLE `thorario`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tReservas`
+-- Indices de la tabla `treservas`
 --
-ALTER TABLE `tReservas`
+ALTER TABLE `treservas`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_horario` (`id_horario`),
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indexes for table `tUser`
+-- Indices de la tabla `tuser`
 --
-ALTER TABLE `tUser`
+ALTER TABLE `tuser`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `tHorario`
+-- AUTO_INCREMENT de la tabla `thorario`
 --
-ALTER TABLE `tHorario`
+ALTER TABLE `thorario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tReservas`
+-- AUTO_INCREMENT de la tabla `treservas`
 --
-ALTER TABLE `tReservas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `treservas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `tUser`
+-- AUTO_INCREMENT de la tabla `tuser`
 --
-ALTER TABLE `tUser`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `tuser`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `tReservas`
+-- Filtros para la tabla `treservas`
 --
-ALTER TABLE `tReservas`
-  ADD CONSTRAINT `tReservas_ibfk_1` FOREIGN KEY (`id_horario`) REFERENCES `tHorario` (`id`),
-  ADD CONSTRAINT `tReservas_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `tUser` (`id`);
+ALTER TABLE `treservas`
+  ADD CONSTRAINT `tReservas_ibfk_1` FOREIGN KEY (`id_horario`) REFERENCES `thorario` (`id`),
+  ADD CONSTRAINT `tReservas_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `tuser` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
